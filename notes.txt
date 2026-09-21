@@ -1,7 +1,7 @@
-this version is the SECOND: 
+this version is the THIRD: 
 - no fixed y-axis
-- no demo video
-- INSTRUCTIONS ABOUT REREADING
+- DEMO VIDEO
+- no instructions about rereading
 
 
 
