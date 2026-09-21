@@ -213,6 +213,26 @@
         After each sentence you will be asked a question about it. Indicate your answer by
         clicking the appropriate option, then click <b>Next</b>.
       </p>
+
+      <p>
+        Here is a short demonstration video:
+      </p>
+
+      <div class="motr-demo-container">
+         <video
+          class="motr-demo-video"
+          :src="motrDemo"
+          autoplay
+          muted
+          loop
+          playsinline
+          controls
+        >
+          Your browser does not support the video element.
+        </video>
+      </div>
+
+      
       <p v-if="practiceTrials.length">We will start with a few practice sentences.</p>
     </InstructionScreen>
 
@@ -300,6 +320,7 @@ import BrowserCheck from "./components/BrowserCheck.vue";
 import { chooseListId, buildPracticeTrials, buildMainTrials } from "./materials";
 import { browserInfo } from "./browser";
 import { submitRows } from "./submit";
+import motrDemo from "./assets/motr_demo_old.mp4";
   
   
 //make the font be a function of the size of the screen so that you never have to scroll to see full sentence -->
@@ -383,7 +404,7 @@ export default {
     console.log(`[MoTR] sentence font size: ${sentenceFontSize}px`);
     
     console.log(`[MoTR] list ${listId}: ${practiceTrials.length} practice + ${mainTrials.length} main trials`, mainTrials);
-    return { config, listId, practiceTrials, mainTrials, sentenceFontSize, longestSentence, submitting: false };
+    return { config, listId, practiceTrials, mainTrials, sentenceFontSize, longestSentence, motrDemo, submitting: false };
   },
   created() {
     // magpie replaces the socket with a stub that raises a "no socket URL is set" warning
@@ -590,5 +611,21 @@ export default {
   -moz-user-select: text;
   -ms-user-select: text;
   user-select: text;
+}
+
+.motr-demo-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.motr-demo-video {
+  width: 1000px;
+  max-width: 95vw;
+  height: auto;
+
+  border: 4px solid black;
+  box-sizing: border-box;
 }
 </style>
