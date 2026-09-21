@@ -206,8 +206,7 @@
     <InstructionScreen title="Instructions">
       <p>
         In this study, you will read sentences. Unlike in normal reading, however, the text
-        will be blurred. To bring the text into focus, move your mouse over it. <b>Feel free to go back and reread</b> any part of the sentence at any point. 
-        Take as much time as you need on any sentence - there is no rush!
+        will be blurred. To bring the text into focus, move your mouse over it.
         When you are done reading, click the <b>Done Reading</b> button.
       </p>
       <p>
